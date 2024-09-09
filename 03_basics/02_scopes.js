@@ -11,6 +11,7 @@ if (true) {
 
 // console.log(a);
 // console.log(b);
+//VAR can be used outside the scope hence avoid using it 
 // console.log(c);
 
 
