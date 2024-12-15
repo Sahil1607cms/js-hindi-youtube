@@ -1,28 +1,27 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+const coding = ["js", "ruby", "java", "python", "cpp"]
+const values = coding.forEach( (item) => {
+    console.log(item);
+    //this return is just working like dummy return since foreach always return undefined, even if we return true here ,the value returned will be undifined 
+    return item
+} )
+console.log(values);
 
 
-// const values = coding.forEach( (item) => {
-//     //console.log(item);
-//     return item
-// } )
-
-// console.log(values);
-
+// FILTERS
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//storing the element greater than 4 in newNums array 
+const newNums = myNums.filter( (num) => {
+    return num > 4
+} )
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
-
-// const newNums = []
-
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
-
-// console.log(newNums);
+// FILTER ALTERNATIVE TRADITIONAL
+const newNums = []
+myNums.forEach( (num) => {
+    if (num > 4) {
+        newNums.push(num)
+    }
+} )
+console.log(newNums);
 
 
 const books = [
