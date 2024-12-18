@@ -10,17 +10,22 @@
     
 </body>
 <script>
+    //DIV will be created 
     const div = document.createElement('div')
     console.log(div);
+    //main class will be added 
     div.className = "main"
+    //random id will be alloted to the div
     div.id = Math.round(Math.random() * 10 + 1)
+    //set value of title as generated title
     div.setAttribute("title", "generated title")
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
+    // div.innerText = "Chai aur code" //this is less preferred do research 
+    const addText = document.createTextNode("Chai aur code") //precide, secure and dynamic creation of text node 
     div.appendChild(addText)
 
+    //appeding the div to the body 
     document.body.appendChild(div)
 </script>
 </html>
