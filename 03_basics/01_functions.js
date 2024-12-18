@@ -26,7 +26,7 @@ const result = addTwoNumbers(3, 5)
 
 // console.log("Result: ", result);
 
-
+//in the parameter we are writing default username as sam , it means even if no username is passed then it will ebe considered as sam
 function loginUserMessage(username = "sam"){
     if(!username){
         console.log("PLease enter a username");
