@@ -21,7 +21,7 @@ function one(){
         const website = "youtube"
         console.log(username);
     }
-    // console.log(website);
+    // console.log(website); this will throw error
 
      two()
 
@@ -35,10 +35,10 @@ if (true) {
         const website = " youtube"
         // console.log(username + website);
     }
-    // console.log(website);
+    // console.log(website); error
 }
 
-// console.log(username);
+// console.log(username);error
 
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
@@ -52,7 +52,8 @@ function addone(num){
 
 
 
-addTwo(5)
+addTwo(5) // this will give error , concept of hoisting
+//addTwo can be known as expressiom
 const addTwo = function(num){
     return num + 2
 }
