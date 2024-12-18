@@ -20,7 +20,7 @@ const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United States of America")
 map.set('Fr', "France")
-map.set('IN', "India")
+map.set('IN', "India") //eliminates duplicate value 
 
 
 // console.log(map);
@@ -35,8 +35,8 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-//this will throw error 
-// for (const [key, value] of myObject) {
+//for..of throws error in terms of object iteration 
+// for (const [key, value] of myObject) {  //not iterable using this method
 //     console.log(key, ':-', value);
     
 // }
