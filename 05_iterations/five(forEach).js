@@ -14,12 +14,14 @@ coding.forEach( (item) => {
 //     console.log(item);
 // }
 
-// coding.forEach(printMe)
+// coding.forEach(printMe) just give reference as arguement, dont pass printMe() whole funtion
 
+//foreach has various parameter access like item ,index and whole array
 // coding.forEach( (item, index, arr)=> {
 //     console.log(item, index, arr);
 // } )
 
+//array of objects 
 const myCoding = [
     {
         languageName: "javascript",
