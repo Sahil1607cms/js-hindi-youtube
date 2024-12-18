@@ -2,6 +2,7 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 const values = coding.forEach( (item) => {
     console.log(item);
     //this return is just working like dummy return since foreach always return undefined, even if we return true here ,the value returned will be undifined 
+    //forEach doesnt return anything
     return item
 } )
 console.log(values);
@@ -10,6 +11,7 @@ console.log(values);
 // FILTERS
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //storing the element greater than 4 in newNums array 
+//only those values will be returned where condition is true
 const newNums = myNums.filter( (num) => {
     return num > 4
 } )
@@ -36,8 +38,10 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
+//userBooks will contain History genre books
   let userBooks = books.filter( (bk) => bk.genre === 'History')
 
+//userBooks will be updated and those books will be stored where the year is >=1995
   userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
 })
