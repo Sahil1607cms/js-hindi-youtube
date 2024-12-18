@@ -12,7 +12,7 @@ for (const key in myObject) {
 
 const programming = ["js", "rb", "py", "java", "cpp"]
 
-//we use for...in for arrays 
+//for...in gives the keys of array i.e. indexes while for...of gives direct value
 for (const key in programming) {
     //console.log(programming[key]);
 }
