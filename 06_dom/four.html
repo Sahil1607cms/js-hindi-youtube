@@ -14,15 +14,18 @@
 <script>
     function addLanguage(langName){
         const li = document.createElement('li');
-        li.innerHTML = `${langName}`
+        li.innerHTML = `${langName}`//previous lecture charcha
         document.querySelector('.language').appendChild(li)
     }
     addLanguage("python")
     addLanguage("typescript")
-
+    //the above process is not optimized because if there are 1000 languages the tree has to be traversed completely
+    
+   //optimized approach of adding elements 
+    //always prefer this
     function addOptiLanguage(langName){
         const li = document.createElement('li');
-        li.appendChild(document.createTextNode(langName))
+        li.appendChild(document.createTextNode(langName))//optimized, secure,precise and 
         document.querySelector('.language').appendChild(li)
     }
     addOptiLanguage('golang')
@@ -32,12 +35,12 @@
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
     const newli = document.createElement('li')
-    newli.textContent = "Mojo"
+    newli.textContent = "Mojo" 
     secondLang.replaceWith(newli)
 
     //edit
     const firstLang = document.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>TypeScript</li>'
+    firstLang.outerHTML = '<li>TypeScript</li>' //dont prefer
 
     //remove
     const lastLang = document.querySelector('li:last-child')
