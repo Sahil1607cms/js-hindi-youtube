@@ -7,11 +7,10 @@ if (userEmail) {
 }
 
 // falsy values
-
 // false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
 //truthy values
-// "0", 'false', " ", [], {}, function(){}
+// "0", 'false', " ", [], {}, function(){} all non empty strings are truthy values
 
 // if (userEmail.length === 0) {
 //     console.log("Array is empty");
@@ -19,6 +18,7 @@ if (userEmail) {
 
 const emptyObj = {}
 
+//Object.keys()brings back array
 if (Object.keys(emptyObj).length === 0) {
     console.log("Object is empty");
 }
@@ -27,9 +27,9 @@ if (Object.keys(emptyObj).length === 0) {
 
 let val1;
 // val1 = 5 ?? 10
-// val1 = null ?? 10
-// val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20
+// val1 = null ?? 10 safety check, if value is null or undefined, assign other value that is 10
+// val1 = undefined ?? 15 
+val1 = null ?? 10 ?? 20 //assigns 10
 
 
 
