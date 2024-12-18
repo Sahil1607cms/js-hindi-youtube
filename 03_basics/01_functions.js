@@ -38,9 +38,10 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 // console.log(loginUserMessage("hitesh"))
 
-
+//we can give any number of parameters in this using rest/spread operator ...
 function calculateCartPrice(val1, val2, ...num1){
-    return num1
+    return num1 //num1 will have array of all parameters after rest operator
+    //means 500,2000 will be stored in num1
 }
 
 // console.log(calculateCartPrice(200, 400, 500, 2000))
