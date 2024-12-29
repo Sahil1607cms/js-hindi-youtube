@@ -46,13 +46,14 @@ if (true) {
 
 console.log(addone(5))
 
+//this will work fine since it is function declaration and will be hoisted at the top 
 function addone(num){
     return num + 1
 }
 
 
 
-addTwo(5) // this will give error , concept of hoisting
+addTwo(5) // this will give error since it is function expression hence hoisting will not be done , concept of hoisting
 //addTwo can be known as expressiom
 const addTwo = function(num){
     return num + 2
