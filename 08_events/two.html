@@ -10,6 +10,7 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+    //settimeout and setinterval are provided by browser they are not part of core javascript 
     const sayHitesh = function(){
         console.log("Hitesh");
     }
@@ -20,7 +21,7 @@
     const changeMe = setTimeout(changeText, 2000)
 
     document.querySelector('#stop').addEventListener('click', function(){
-        clearTimeout(changeMe)
+        clearTimeout(changeMe) //this will stop the set timeout function     
         console.log("STOPPED")
     })
 </script>
