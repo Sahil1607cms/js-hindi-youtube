@@ -19,6 +19,8 @@
    </div>
 </body>
 <script>
+    
+    not feasible approach!!!
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
@@ -26,33 +28,54 @@
      // attachEvent()
     // jQuery - on
 
+    these things u must know for interviews 
     // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    // target, toElement, srcElement(used very much), currentTarget,
+    // clientX, clientY, screenX, screenY ( these are interview related )
+    // altkey, ctrlkey, shiftkey, keyCode (these keys are directly accessed)
 
+    best approach
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
+    // }, false) 
+    this third parameter is false by default,asked in interviews why is it false 
+
+    event propagation is of 2 types 
+    1) event bubbling 
+    2) event capturing 
+    
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked"); this will print owl clicked then ul clicked ,event bubbling takes place --neeche se upar jaata hai 
+    //     e.stopPropagation() this prevents bubbling , no ul is clicked printed 
+    // }, false)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault(); this will prevent the default behaviour of redirecting 
+    //     e.stopPropagation()
+    //     console.log("google clicked");
     // }, false)
 
+    When we change the default parameter to true then event capturing takes place --outside to inside, first clicked in ul, then owl is clicked
     // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
+    //     console.log("owl clicked"); this will print owl clicked then ul clicked ,event bubbling takes place --neeche se upar jaata hai 
     //     e.stopPropagation()
-    // }, false)
+    // }, true)
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
     //     console.log("google clicked");
-    // }, false)
-   
+    // }, true)
+
+
+    
     
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
+        console.log(e.target.tagName);// prints the tagName whether it is li, img, anchor tag etc
+        if (e.target.tagName === 'IMG') { //if it is image only then remove it not otherwise 
             console.log(e.target.id);
             let removeIt = e.target.parentNode
-            removeIt.remove()
+            removeIt.remove() //removes the image clicked     
         }
     
         
