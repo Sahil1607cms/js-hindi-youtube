@@ -17,12 +17,12 @@
             //requirement
             document
                 .querySelector('button')
-                .addEventListener('click', this.handleClick.bind(this))
+                .addEventListener('click', this.handleClick.bind(this))//bind(this) will pass the reference of variables like library,server hence they can be accessed outside 
 
         }
         handleClick(){
             console.log("button clicked");
-            console.log(this.server);
+            console.log(this.server);//just checking whether the variables can be accessed or not 
         }
     }
 
