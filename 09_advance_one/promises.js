@@ -8,6 +8,10 @@ const promiseOne = new Promise(function(resolve, reject){
         resolve()
     }, 1000)
 })
+
+INTERVIEW QUES)If there is error 404 in promise then will it be in resolve or reject 
+ANS) We will always get it in response 
+
 //AGAR RESOLVE HUA, THEN IT MOVES TO .then (agar line 8 hai resolve() tb hi .then ke andar control aayega)
 promiseOne.then(function(){
     console.log("Promise consumed");
@@ -93,6 +97,10 @@ async function consumePromiseFive(){
 
 consumePromiseFive()
 
+
+!!!!!!!!!!!
+FETCH sabse pehle execute hota hai bcoz it has its own special queue called MICROTASK QUEUE (priority queue) vip line 
+so setTimeout of 1 second and fetch of 1 second, fetch will be executed first 
 // async function getAllUsers(){
 //     try {
           fetching takes time hence await is required 
