@@ -1,3 +1,5 @@
+//A PROMISE IS AN OBJECT
+//PROMISE REQUIRES A CALLBACK, RESOLVE AND REJECT AND PREVENT CALLBACK HELL 
 const promiseOne = new Promise(function(resolve, reject){
     //Do an async task
     // DB calls, cryptography, network
@@ -6,11 +8,13 @@ const promiseOne = new Promise(function(resolve, reject){
         resolve()
     }, 1000)
 })
-
+//AGAR RESOLVE HUA, THEN IT MOVES TO .then (agar line 8 hai resolve() tb hi .then ke andar control aayega)
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
 
+//it is not necessary to store promise in a variable always 
+//here we are combining two parts into 1 part only resolve .then same place 
 new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log("Async task 2");
@@ -21,16 +25,21 @@ new Promise(function(resolve, reject){
     console.log("Async 2 resolved");
 })
 
+//
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
+        //we can pass object data using resolve , object is passed mostly as data 
         resolve({username: "Chai", email: "chai@example.com"})
     }, 1000)
 })
 
+//whole object will be passed as parameter 
 promiseThree.then(function(user){
+    //whole object will be printed
     console.log(user);
 })
 
+//using reject concept
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = true
@@ -46,11 +55,15 @@ const promiseFour = new Promise(function(resolve, reject){
  .then((user) => {
     console.log(user);
     return user.username
-}).then((username) => {
+})
+     .then((username) => { //chaining is being done 
     console.log(username);
-}).catch(function(error){
+     //reject comes here directly and skips .then
+})
+     .catch(function(error){
     console.log(error);
-}).finally(() => console.log("The promise is either resolved or rejected"))
+})   //this tells whether it is resolved or rejected and is executed always 
+     .finally(() => console.log("The promise is either resolved or rejected"))
 
 
 
@@ -65,6 +78,10 @@ const promiseFive = new Promise(function(resolve, reject){
     }, 1000)
 });
 
+//promise can be handled with async await as well, mostly used in databases, prefer async await 
+//it is similar to .then .catch, it says dont move ahead if database conncection fails 
+//use try for resolve and catch will handle reject 
+//both syntax are similar 
 async function consumePromiseFive(){
     try {
         const response = await promiseFive
@@ -78,8 +95,10 @@ consumePromiseFive()
 
 // async function getAllUsers(){
 //     try {
+          fetching takes time hence await is required 
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-
+          data comes in string format we change it to json
+          also the response.json should be AWAITED since it takes time 
 //         const data = await response.json()
 //         console.log(data);
 //     } catch (error) {
@@ -89,6 +108,7 @@ consumePromiseFive()
 
 //getAllUsers()
 
+//this is better format and easy to understand 
 fetch('https://api.github.com/users/hiteshchoudhary')
 .then((response) => {
     return response.json()
