@@ -14,11 +14,11 @@
     // function init() {
     //     let name = "Mozilla"; 
     //     function displayName() {
-    //         console.log(name); 
+    //         console.log(name); works fine without error
     //     }
     //     displayName();
     // }
-    // init();
+    // init(); this will print Mozilla
 
     // function outer(){
     //     let username = "hitesh"
@@ -37,14 +37,15 @@
     // }
     // outer()
     // console.log("TOO OUTER", username);
-
+Children can inherit from parents but not vice versa 
 
     // function makeFunc() {
     //     const name = "Mozilla";
     //     function displayName() {
     //         console.log(name);
     //     }
-    //     return displayName;
+    //     return displayName; 
+        this will return whole LEXICAL scope i.e. makeFunc ke variable jo child me use hue the wo bhi return honge 
     // }
 
     // const myFunc = makeFunc();
@@ -52,6 +53,8 @@
 
     </script>
     <script>
+        REAL WORLD PROBLEM OF LEXICAL SCOPE FACED 
+        THIS CAN BE ASKED IN THE INTERVIEW 
         // document.getElementById("orange").onclick = function(){
         //     document.body.style.backgroundColor = `orange`
         // }
