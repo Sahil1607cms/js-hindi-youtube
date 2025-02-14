@@ -30,7 +30,7 @@ const obj4 = {5: "a", 6: "b"}
 const obj3 = {...obj1, ...obj2} //latest and best format to concatenate 
 // console.log(obj3);
 
-//when we get data from database we get array of objects
+//when we get data from database we get array of objects common in database 
 const users = [
     {
         id: 1,
@@ -50,11 +50,11 @@ users[1].email
 // console.log(tinderUser);
 
 //VVVVVIMPPPPP
-// console.log(Object.keys(tinderUser)); this gives all keys of objects and store it in format of array 
-// console.log(Object.values(tinderUser)); this gives all values of objects and store it in format of array 
-// console.log(Object.entries(tinderUser)); rarely used 
+// console.log(Object.keys(tinderUser)); // ["id", "name", "isLoggedIn"] (array of keys)
+// console.log(Object.values(tinderUser)); // ["123abc", "Sammy", false] (array of values)
+// console.log(Object.entries(tinderUser));  // [["id", "123abc"], ["name", "Sammy"], ["isLoggedIn", false]]
 
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); → Checks if the object has a specific key. // true
 
 
 
@@ -86,4 +86,11 @@ console.log(instructor);
     {},
     {}
 ]
-
+TAKEAWAYS!!!!
+Objects are created using {} (preferred) or new Object().
+Nested objects allow storing complex data.
+Use the spread operator (...) to merge objects easily.
+Databases often return arrays of objects.
+Use Object.keys(), Object.values(), and Object.entries() for object operations.
+Object destructuring is useful for shorthand access.
+JSON is widely used for data exchange (e.g., APIs).
