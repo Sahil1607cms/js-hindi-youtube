@@ -3,9 +3,9 @@ let score = "hitesh"
 //console.log(typeof score);
 //console.log(typeof(score));
 
-let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+let valueInNumber = Number(score) //string cant be converted to number, hence Number(score) returns Nan
+//console.log(typeof valueInNumber); type of nan is number
+//console.log(valueInNumber); prints number 
 
 
 // "33" => 33
