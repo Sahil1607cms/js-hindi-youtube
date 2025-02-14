@@ -13,8 +13,8 @@ coding.forEach( (item) => {
 // function printMe(item){
 //     console.log(item);
 // }
-
-// coding.forEach(printMe) just give reference as arguement, dont pass printMe() whole funtion
+ Just pass the function reference, don't call it (no parentheses `printMe()`)
+coding.forEach(printMe) just give reference as arguement, dont pass printMe() whole funtion
 
 //foreach has various parameter access like item ,index and whole array
 // coding.forEach( (item, index, arr)=> {
@@ -41,3 +41,9 @@ myCoding.forEach( (item) => {
     
     console.log(item.languageName);
 } )
+
+forEach is used for looping through arrays.
+Can accept a function reference instead of an inline function.
+Supports parameters: item, index, and array.
+Works great with arrays of objects.
+Doesn't return anything (undefined), so it can't be used for chaining.
