@@ -26,11 +26,14 @@ const JsUser = {
 
 JsUser.email = "hitesh@chatgpt.com"
 // Object.freeze(JsUser)
-//after freezing no changes will be made to the object, also no error will be shown if we try to change the value after freezing 
+//Freezing an object makes it immutable: after freezing no changes will be made to the object, also no error will be shown if we try to change the value after freezing 
+//Since JsUser is frozen, this assignment will silently fail (in non-strict mode).
+//If you are in strict mode ("use strict";), JavaScript will throw a TypeError.
 JsUser.email = "hitesh@microsoft.com"
-// console.log(JsUser);
+// console.log(JsUser); //display original name hitesh....
 
-//this greeting will act as variable and it will have this function 
+
+//this greeting will act as variable(key) and it will have this function 
 JsUser.greeting = function(){
     console.log("Hello JS user");
 }
