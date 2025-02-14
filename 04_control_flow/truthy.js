@@ -18,7 +18,7 @@ if (userEmail) {
 
 const emptyObj = {}
 
-//Object.keys()brings back array
+//Object.keys()brings back array of objects
 if (Object.keys(emptyObj).length === 0) {
     console.log("Object is empty");
 }
@@ -29,11 +29,10 @@ let val1;
 // val1 = 5 ?? 10
 // val1 = null ?? 10 safety check, if value is null or undefined, assign other value that is 10
 // val1 = undefined ?? 15 
-val1 = null ?? 10 ?? 20 //assigns 10
 
-
-
-console.log(val1);
+Nullish Coalescing Operator (??)
+val1 = null ?? 10 ?? 20 //Output: 10 (first non-null/undefined value)
+console.log(val1); //Output: 10 (first non-null/undefined value)
 
 // Terniary Operator
 
@@ -41,3 +40,10 @@ console.log(val1);
 
 const iceTeaPrice = 100
 iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
+
+
+TAKEAWAYS!!!!
+Truthy/Falsy values help determine conditional execution.
+Empty objects and arrays need special checks (Object.keys(obj).length === 0 for objects, .length === 0 for arrays).
+?? (Nullish Coalescing) provides a default value only for null or undefined.
+Ternary operators (? :) provide a compact way to write conditional logic.
