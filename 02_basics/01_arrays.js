@@ -28,12 +28,12 @@ const myArr2 = new Array(1, 2, 3, 4)
 
 console.log("A ", myArr);
 
-const myn1 = myArr.slice(1, 3)
+const myn1 = myArr.slice(1, 3) //doesnt modify the original array( index1 to index2-1)
 
 console.log(myn1);
 console.log("B ", myArr);
 
 
-const myn2 = myArr.splice(1, 3)
+const myn2 = myArr.splice(1, 3) //modify the original array( index1 to index2 ) remove the part between these indexes including it 
 console.log("C ", myArr);
 console.log(myn2);
